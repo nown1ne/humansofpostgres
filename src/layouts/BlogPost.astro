@@ -18,7 +18,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             alt=""
             style={{
               width: "100%",
-              height: "70vh",
+              height: "60vh",
               objectFit: "cover",
             }}
           />
@@ -27,12 +27,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
       <div
         class="backdrop-blur-xl text-slate-200 absolute bottom-0 w-full px-10"
       >
-        <p class="lg:text-6xl text-3xl text-center mt-4 font-bold mb-6 z-50">
-          {description}
+        <p class="lg:text-6xl text-3xl text-center my-8 font-bold z-50">
+          {title}
         </p>
-        <div class="text-center leading-normal mb-4">
-          <p class="my-1">Written by:</p>
-          <div class="date">
             <FormattedDate date={pubDate} />
             {
               updatedDate && (
